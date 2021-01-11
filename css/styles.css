@@ -1,0 +1,132 @@
+@import url('https://rsms.me/inter/inter.css');
+html { font-family: 'Inter', sans-serif; height:100%; width:100%;}
+
+body{
+background-image: linear-gradient(180deg, #68C3E5 0%, #394CAF 100%);	
+background-color:#68C3E5;
+height:100%;
+width:100%;
+overflow: hidden;
+}
+
+.header{
+	  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+	text-align: center;
+	margin-left:auto;
+	margin-right:auto;
+
+	font-family: Inter;
+	font-style: normal;
+	font-weight: 200;
+	font-size: 50px;
+	line-height: 61px;
+	align-items: center;
+	text-align: center;
+
+	color: #FFFFFF;
+}
+
+.timer{
+	  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+	margin:auto;
+	font-family: Inter;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 100px;
+	line-height: 61px;
+	display: none;
+	align-items: center;
+	text-align: center;
+	opacity:0.5;
+
+	color: #FFFFFF;
+}
+
+.digits{
+	display:inline-block;
+}
+
+.subtext{
+	  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+	padding-top:5%;
+	font-family: Inter;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 20px;
+	line-height: 48px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	visibility: hidden;
+	color: rgba(243, 243, 243, 0.62);
+}
+
+.start{
+	cursor:pointer;
+	position: absolute;
+	bottom: 20%;
+	left: 50%;
+ 	transform: translate(-50%, -50%);
+	padding-top:5%;
+	font-family: Inter;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 20px;
+	line-height: 48px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	color: rgba(243, 243, 243, 0.62);
+}
+
+
+
+.fadeout {
+  animation: fadeout 1.5s linear;
+}
+
+@keyframes fadeout {
+  20%{ opacity: 1 }
+  0%, 100% { opacity: 0 }
+}
+
+#subtextalert{
+	/*visibility: hidden;*/
+ 	opacity:0;
+}
+
+.actionmenu{
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+margin-left:auto;
+font-family: Inter;
+font-style: normal;
+font-weight: 300;
+font-size: 30px;
+line-height: 36px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: rgba(243, 243, 243, 0.62);
+
+}
+
+.action{
+	display:inline-block;
+	margin:15px;
+	padding:5px;
+	font-size:12px;
+	cursor:pointer;
+}
