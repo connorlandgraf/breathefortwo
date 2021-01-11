@@ -1,6 +1,6 @@
 var timeToStart = 2;
-var mins = 0;
-var secs = 10;
+var mins = 2;
+var secs = 0;
 var displaysecs;
 var started = 0;
 var audio = new Audio();
