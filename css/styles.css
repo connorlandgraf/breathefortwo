@@ -89,6 +89,9 @@ overflow: hidden;
 }
 
 
+#finished{
+	visibility: hidden;
+}
 
 .fadeout {
   animation: fadeout 1.5s linear;

@@ -1,6 +1,6 @@
 var timeToStart = 2;
-var mins = 2;
-var secs = 0;
+var mins = 0;
+var secs = 10;
 var displaysecs;
 var started = 0;
 var audio = new Audio();
@@ -12,7 +12,7 @@ function start(){
 
 		if (timeToStart >= 0){
 			var html = document.getElementById("startcount").innerHTML = timeToStart;
-			console.log(timeToStart);
+			//console.log(timeToStart);
 
 		}
 		if (timeToStart == 0){
@@ -32,7 +32,7 @@ function switchAudio(clip){
 
 function startBreatheExercise(){
 	started = 1;
-	console.log('starting breath exercise');
+	//console.log('starting breath exercise');
 	//play music
 	audio = new Audio('audio/waves.mp3');
 	audio.play();
@@ -44,21 +44,22 @@ function startBreatheExercise(){
 
 	var y = setInterval(function(){
 
-		if (secs == 0){
+		if (secs == 0 && mins >0){
 			mins = mins-1;
 			secs = 59;
 		}
 
 
-		if (mins < 0 && secs < 0){
+		if (mins <= 0 && secs <= 0){
 			updateTimerUi(secs, mins);
-			console.log('finished');
+			document.getElementById("finished").style.visibility = "visible";
+			//console.log('finished');
 			audio.pause();
-			exit();
+			return;
 		}
 
 		updateTimerUi(secs, mins);
-		console.log('time ' + mins + ":" + secs);
+		//console.log('time ' + mins + ":" + secs);
 
 		secs = secs - 1;
 
@@ -67,7 +68,7 @@ function startBreatheExercise(){
 
 document.onmousemove = function(){
 	if (started == 1){
-		console.log('moved mouse');
+		//console.log('moved mouse');
 		resetBreatheExercise();		
 	}
 }
